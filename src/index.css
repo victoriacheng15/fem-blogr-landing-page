@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .grid-center {
+    @apply grid place-items-center;
+  }
+
+  .img-full-width {
+    @apply w-full aspect-auto;
+  }
+}
