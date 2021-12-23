@@ -70,7 +70,7 @@ const Nav = function () {
             </div>
           </div>
         </ul>
-        <u className="flex items-center">
+        <ul className="flex items-center">
           <div className="hidden md:flex items-center gap-4">
             <CustomButton
               btnText="login"
@@ -88,7 +88,7 @@ const Nav = function () {
               alt="hamburger menu"
             />
           </div>
-        </u>
+        </ul>
       </div>
       <div className={`${!toggleMenu ? 'hidden' : ''} p-4 w-9/12 left-1/2 -translate-x-2/4 translate-y-4 bg-white flex flex-col items-center gap-4 text-center absolute z-20`}>
         <MobileNav />
