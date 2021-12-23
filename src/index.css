@@ -10,4 +10,8 @@
   .img-full-width {
     @apply w-full aspect-auto;
   }
+
+  .btn {
+    @apply py-2 px-5 font-ubuntu capitalize font-semibold rounded-full duration-300 ease-in-out;
+  }
 }

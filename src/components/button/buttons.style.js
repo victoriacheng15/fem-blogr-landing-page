@@ -1,11 +1,11 @@
 const btnStyles = {
-  defaultBtn: 'py-2 px-5 capitalize text-white font-semibold rounded-full duration-300 ease-in-out',
-  whiteText: 'text-white',
-  bgWhite: 'bg-white text-primary-cta',
-  border: 'border-2 border-white',
-  hover: 'hover:bg-primary-ctaHover hover:text-white',
-  whiteHover: 'hover:bg-white hover:text-primary-cta',
-  mobileBtn: 'py-2 px-5 capitalize text-black font-semibold duration-300 ease-in-out',
+  defaultBtn: 'btn text-white',
+  underlineHover: 'btn text-white hover:underline',
+  bgWhite: 'btn bg-white text-primary-cta hover:bg-primary-ctaHover hover:text-white',
+  borderBtn: 'btn border-2 border-white text-white hover:bg-white hover:text-primary-cta',
+  mobileBtn: 'btn text-black',
+  mobileGradient:
+    'btn w-28 text-white font-semibold bg-gradient-to-r from-gradientLight-925 to-gradientLight-950',
 };
 
 export default btnStyles;

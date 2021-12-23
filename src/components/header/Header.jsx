@@ -15,20 +15,16 @@ const Header = function () {
     >
       <Nav />
       <div className="w-11/12 max-w-7xl m-auto relative z-10 mb-10 grid place-items-center gap-4 content-center">
-        <h1 className="pt-32 w-[95%] mb-4 text-white text-4xl lg:text-6xl text-center">A modern publishing platofrm</h1>
-        <p className="mb-8 text-white text-xl text-center"> Grow your audience andbuild your online brand</p>
+        <h1 className="pt-32 w-[95%] mb-4 fonr-overpass font-medium text-white text-4xl lg:text-6xl text-center">A modern publishing platofrm</h1>
+        <p className="mb-8 font-ubuntu text-white text-xl text-center"> Grow your audience andbuild your online brand</p>
         <div className="flex items-center gap-4">
           <CustomButton
             btnText="start for free"
-            defaultBtn={btnStyles.defaultBtn}
-            bg={btnStyles.bgWhite}
-            hover={btnStyles.hover}
+            btnStyle={btnStyles.bgWhite}
           />
           <CustomButton
             btnText="learn more"
-            defaultBtn={btnStyles.defaultBtn}
-            border={btnStyles.border}
-            hover={btnStyles.whiteHover}
+            btnStyle={btnStyles.borderBtn}
           />
         </div>
       </div>
