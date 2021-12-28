@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 
-const CustomButton = ({ src, alt, btnText, btnStyle, onclick, rotateArrow }) => (
-  <button onClick={onclick} type="button" className={`${btnStyle}`}>
+const CustomButton = ({ src, alt, btnText, classes, onclick, rotateArrow }) => (
+  <button onClick={onclick} type="button" className={classes}>
     {
         btnText && src
           ? (

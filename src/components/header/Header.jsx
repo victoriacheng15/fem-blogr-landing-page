@@ -2,8 +2,6 @@ import React from 'react';
 import CustomButton from '../button/CustomButton';
 import Nav from '../nav/Nav';
 
-import btnStyles from '../button/buttons.style';
-
 const Header = () => (
   <header
     className="w-full h-[37.5rem] rounded-bl-100 bg-gradient-to-b from-gradientLight-925 to-gradientLight-950
@@ -19,11 +17,11 @@ const Header = () => (
       <div className="flex items-center gap-4">
         <CustomButton
           btnText="start for free"
-          btnStyle={btnStyles.bgWhite}
+          classes="btn bg-white text-primary-cta hover:bg-primary-ctaHover hover:text-white"
         />
         <CustomButton
           btnText="learn more"
-          btnStyle={btnStyles.borderBtn}
+          classes="btn border-2 border-white text-white hover:bg-white hover:text-primary-cta"
         />
       </div>
     </div>

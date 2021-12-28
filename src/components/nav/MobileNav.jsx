@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import CustomButton from '../button/CustomButton';
 import DropdownMenu from './DropdownMenu';
 
-import btnStyles from '../button/buttons.style';
 import darkArrow from '../../../images/icon-arrow-dark.svg';
 
 const MobileNav = () => {
@@ -20,7 +19,7 @@ const MobileNav = () => {
       <CustomButton
         onclick={toggleDropdown}
         btnText="product"
-        btnStyle={btnStyles.mobileBtn}
+        classes="btn text-black"
         src={darkArrow}
         alt="arrow"
         rotateArrow={`${dropdown ? 'rotate-180' : ''} duration-300 ease`}
@@ -29,7 +28,7 @@ const MobileNav = () => {
       <CustomButton
         onclick={toggleDropdown2}
         btnText="company"
-        btnStyle={btnStyles.mobileBtn}
+        classes="btn text-black"
         src={darkArrow}
         alt="arrow"
         rotateArrow={`${dropdown2 ? 'rotate-180' : ''} duration-300 ease`}
@@ -38,7 +37,7 @@ const MobileNav = () => {
       <CustomButton
         onclick={toggleDropdown3}
         btnText="connect"
-        btnStyle={btnStyles.mobileBtn}
+        classes="btn text-black"
         src={darkArrow}
         alt="arrow"
         rotateArrow={`${dropdown3 ? 'rotate-180' : ''} duration-300 ease`}
@@ -47,11 +46,11 @@ const MobileNav = () => {
       <div className="grid justify-center w-full gap-2 p-4 border-t-2">
         <CustomButton
           btnText="login"
-          btnStyle={btnStyles.mobileBtn}
+          classes="btn text-black"
         />
         <CustomButton
           btnText="sign up"
-          btnStyle={btnStyles.mobileGradient}
+          classes="btn w-28 text-white bg-gradient-to-r from-gradientLight-925 to-gradientLight-950"
         />
       </div>
     </>

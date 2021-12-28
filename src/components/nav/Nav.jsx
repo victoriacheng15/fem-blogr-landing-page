@@ -7,7 +7,6 @@ import MobileNav from './MobileNav';
 import blogr from '../../../images/logo.svg';
 import hamburger from '../../../images/icon-hamburger.svg';
 import arrow from '../../../images/icon-arrow-light.svg';
-import btnStyles from '../button/buttons.style';
 
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -34,7 +33,7 @@ const Nav = () => {
             <CustomButton
               onclick={toggleDeskDrop}
               btnText="product"
-              btnStyle={btnStyles.underlineHover}
+              classes="btn text-white hover:underline"
               src={arrow}
               alt="arrow"
               rotateArrow={`${deskDrop ? 'rotate-180' : ''} duration-300 ease`}
@@ -45,7 +44,7 @@ const Nav = () => {
             <CustomButton
               onclick={toggleDeskDrop2}
               btnText="company"
-              btnStyle={btnStyles.underlineHover}
+              classes="btn text-white hover:underline"
               src={arrow}
               alt="arrow"
               rotateArrow={`${deskDrop2 ? 'rotate-180' : ''} duration-300 ease`}
@@ -56,33 +55,29 @@ const Nav = () => {
             <CustomButton
               onclick={toggleDeskDrop3}
               btnText="connect"
-              btnStyle={btnStyles.underlineHover}
+              classes="btn text-white hover:underline"
               src={arrow}
               alt="arrow"
               rotateArrow={`${deskDrop3 ? 'rotate-180' : ''} duration-300 ease`}
             />
             <DropdownMenu list="connect" classes={`${!deskDrop3 ? 'hidden' : ''} desktop-dropdown`} />
           </li>
-
         </ul>
-        <ul className="flex items-center">
-          <div className="items-center hidden gap-4 md:flex">
-            <CustomButton
-              btnText="login"
-              btnStyle={btnStyles.defaultBtn}
-            />
-            <CustomButton
-              btnText="sign up"
-              btnStyle={btnStyles.bgWhite}
-            />
-          </div>
-          <div className="md:hidden">
-            <CustomButton
-              onclick={mobileMenu}
-              src={hamburger}
-              alt="hamburger menu"
-            />
-          </div>
+        <ul className="flex items-center gap-4">
+          <CustomButton
+            btnText="login"
+            classes="btn text-white hidden md:flex"
+          />
+          <CustomButton
+            btnText="sign up"
+            classes="btn bg-white text-primary-cta hover:bg-primary-ctaHover hover:text-white hidden md:flex"
+          />
+          <CustomButton
+            onclick={mobileMenu}
+            src={hamburger}
+            alt="hamburger menu"
+            classes="md:hidden"
+          />
         </ul>
       </div>
       <div className={`${!toggleMenu ? 'hidden' : ''} p-4 w-9/12 left-1/2 -translate-x-2/4 translate-y-4 bg-white flex flex-col items-center gap-3 text-center absolute z-20`}>
