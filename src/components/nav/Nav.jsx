@@ -63,7 +63,7 @@ const Nav = () => {
             <DropdownMenu list="connect" classes={`${!deskDrop3 ? 'hidden' : ''} desktop-dropdown`} />
           </li>
         </ul>
-        <ul className="flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <CustomButton
             btnText="login"
             classes="btn text-white hidden md:flex"
@@ -78,7 +78,7 @@ const Nav = () => {
             alt="hamburger menu"
             classes="md:hidden"
           />
-        </ul>
+        </div>
       </div>
       <div className={`${!toggleMenu ? 'hidden' : ''} p-4 w-9/12 left-1/2 -translate-x-2/4 translate-y-4 bg-white flex flex-col items-center gap-3 text-center absolute z-20`}>
         <MobileNav />
