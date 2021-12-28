@@ -18,5 +18,6 @@ module.exports = {
     'object-curly-newline': 0,
     'import/prefer-default-export': 0,
     'consistent-return': 0,
+    'react/function-component-definition': 0,
   },
 };

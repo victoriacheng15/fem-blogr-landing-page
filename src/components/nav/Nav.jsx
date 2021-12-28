@@ -9,7 +9,7 @@ import hamburger from '../../../images/icon-hamburger.svg';
 import arrow from '../../../images/icon-arrow-light.svg';
 import btnStyles from '../button/buttons.style';
 
-const Nav = function () {
+const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const mobileMenu = () => setToggleMenu(!toggleMenu);
 
@@ -22,56 +22,51 @@ const Nav = function () {
   const toggleDeskDrop3 = () => setDeskDrop3(!deskDrop3);
 
   return (
-    <nav className="w-11/12 max-w-6xl m-auto pt-8 relative">
+    <nav className="relative w-11/12 max-w-6xl pt-8 m-auto">
       <div className="flex items-center justify-between">
         <ul className="flex items-center gap-8">
-          <a href="/home">
-            <img src={blogr} alt="logo" />
-          </a>
-          <div className="hidden md:flex items-center">
-            <div className="relative">
-              <CustomButton
-                onclick={toggleDeskDrop}
-                btnText="product"
-                btnStyle={btnStyles.underlineHover}
-                src={arrow}
-                alt="arrow"
-                rotateArrow={`${deskDrop ? 'rotate-180' : ''} duration-300 ease`}
-              />
-              <div className={`${!deskDrop ? 'hidden' : ''} absolute z-30 py-8 px-6 w-40 bg-slate-100 rounded-lg`}>
-                <DropdownMenu list="product" bold />
-              </div>
-            </div>
-            <div>
-              <CustomButton
-                onclick={toggleDeskDrop2}
-                btnText="company"
-                btnStyle={btnStyles.underlineHover}
-                src={arrow}
-                alt="arrow"
-                rotateArrow={`${deskDrop2 ? 'rotate-180' : ''} duration-300 ease`}
-              />
-              <div className={`${!deskDrop2 ? 'hidden' : ''} absolute z-30 py-8 px-6 w-40 bg-slate-100 rounded-lg`}>
-                <DropdownMenu list="company" />
-              </div>
-            </div>
-            <div>
-              <CustomButton
-                onclick={toggleDeskDrop3}
-                btnText="connect"
-                btnStyle={btnStyles.underlineHover}
-                src={arrow}
-                alt="arrow"
-                rotateArrow={`${deskDrop3 ? 'rotate-180' : ''} duration-300 ease`}
-              />
-              <div className={`${!deskDrop3 ? 'hidden' : ''} absolute z-30 py-8 px-6 w-40 bg-slate-100 rounded-lg`}>
-                <DropdownMenu list="connect" />
-              </div>
-            </div>
-          </div>
+          <li>
+            <a href="/home">
+              <img src={blogr} alt="logo" />
+            </a>
+          </li>
+          <li className="relative hidden md:flex">
+            <CustomButton
+              onclick={toggleDeskDrop}
+              btnText="product"
+              btnStyle={btnStyles.underlineHover}
+              src={arrow}
+              alt="arrow"
+              rotateArrow={`${deskDrop ? 'rotate-180' : ''} duration-300 ease`}
+            />
+            <DropdownMenu list="product" classes={`${!deskDrop ? 'hidden' : ''} desktop-dropdown`} />
+          </li>
+          <li className="relative hidden md:flex">
+            <CustomButton
+              onclick={toggleDeskDrop2}
+              btnText="company"
+              btnStyle={btnStyles.underlineHover}
+              src={arrow}
+              alt="arrow"
+              rotateArrow={`${deskDrop2 ? 'rotate-180' : ''} duration-300 ease`}
+            />
+            <DropdownMenu list="company" classes={`${!deskDrop2 ? 'hidden' : ''} desktop-dropdown`} />
+          </li>
+          <li className="relative hidden md:flex">
+            <CustomButton
+              onclick={toggleDeskDrop3}
+              btnText="connect"
+              btnStyle={btnStyles.underlineHover}
+              src={arrow}
+              alt="arrow"
+              rotateArrow={`${deskDrop3 ? 'rotate-180' : ''} duration-300 ease`}
+            />
+            <DropdownMenu list="connect" classes={`${!deskDrop3 ? 'hidden' : ''} desktop-dropdown`} />
+          </li>
+
         </ul>
         <ul className="flex items-center">
-          <div className="hidden md:flex items-center gap-4">
+          <div className="items-center hidden gap-4 md:flex">
             <CustomButton
               btnText="login"
               btnStyle={btnStyles.defaultBtn}
@@ -90,7 +85,7 @@ const Nav = function () {
           </div>
         </ul>
       </div>
-      <div className={`${!toggleMenu ? 'hidden' : ''} p-4 w-9/12 left-1/2 -translate-x-2/4 translate-y-4 bg-white flex flex-col items-center gap-4 text-center absolute z-20`}>
+      <div className={`${!toggleMenu ? 'hidden' : ''} p-4 w-9/12 left-1/2 -translate-x-2/4 translate-y-4 bg-white flex flex-col items-center gap-3 text-center absolute z-20`}>
         <MobileNav />
       </div>
     </nav>

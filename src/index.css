@@ -12,6 +12,14 @@
   }
 
   .btn {
-    @apply py-2 px-5 font-ubuntu capitalize font-semibold rounded-full duration-300 ease-in-out;
+    @apply px-5 py-2 font-semibold capitalize duration-300 ease-in-out rounded-full font-ubuntu;
+  }
+
+  .desktop-dropdown {
+    @apply absolute z-30 grid w-40 gap-2 px-6 py-8 rounded-lg top-10 bg-slate-100;
+  }
+
+  .mobile-dropdown {
+    @apply grid w-full gap-2 p-4 rounded-lg bg-neutral-body/25;
   }
 }

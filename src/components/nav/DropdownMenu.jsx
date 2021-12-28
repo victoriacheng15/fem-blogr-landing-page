@@ -1,7 +1,7 @@
 import React from 'react';
 import Navlink from './Navlink';
 
-const DropdownMenu = function ({ list, darkText }) {
+const DropdownMenu = ({ list, classes }) => {
   const productList = ['overview', 'pricing', 'marketplace', 'features', 'integrations'];
   const companyList = ['about', 'team', 'blog', 'careers'];
   const connectList = ['contact', 'newsletter', 'linkedin'];
@@ -21,7 +21,7 @@ const DropdownMenu = function ({ list, darkText }) {
   };
 
   return (
-    <ul className={`flex flex-col gap-2 items-center justify-center lg:items-start ${!darkText ? 'text-gradientDark-925' : 'text-neutral-txtFooter'}`}>
+    <ul className={classes}>
       {populateList(list)}
     </ul>
   );
