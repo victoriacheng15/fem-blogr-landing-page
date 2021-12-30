@@ -1,1 +1,0 @@
-before:absolute before:w-full before:aspect-square before:bg-[url('/images/bg-pattern-circles.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:-top-[125px] sm:before:-top-[400px]
