@@ -22,8 +22,9 @@ The goals:
 
 ## Built with
 
-- Semantic HTML5 markup
+- React
 - Tailwind CSS
+- Semantic HTML5 markup
 - Mobile-first workflow
 
 ## Author
